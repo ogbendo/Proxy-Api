@@ -3,7 +3,6 @@ from flask_restx import Resource, Api
 from flask_limiter import Limiter
 from flask_limiter.util import get_remote_address
 import asyncio
-import json
 
 from api.proxy import Proxies
 
