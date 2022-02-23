@@ -4,8 +4,6 @@ import aiohttp
 
 from .urls import *
 
-asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
-
 
 class Proxies:
     def __init__(self):
