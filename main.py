@@ -2,12 +2,10 @@ from flask import Flask, jsonify
 from flask_restx import Resource, Api
 import asyncio
 
-from api.proxy import Proxies
+from api import Proxies
 
 app = Flask(__name__)
-api = Api(app, doc=False, title='Proxy Scraper',
-          description='Scrapes thousands of proxies from multiple sources. You '
-                      'can choose between random, http or socks proxies.', version='1.0')
+api = Api(app, doc=False)
 pr = Proxies()
 asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
 
